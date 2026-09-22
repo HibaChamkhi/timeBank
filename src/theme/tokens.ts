@@ -115,10 +115,10 @@ import { getLocale } from '../i18n/core';
 
 // Only three weights are used across the app.
 export const fontFamily = {
-  regular: 'Inter_400Regular',
-  medium: 'Inter_500Medium',
-  semibold: 'Inter_600SemiBold',
-  bold: 'Inter_700Bold',
+  regular: 'Poppins_400Regular',
+  medium: 'Poppins_500Medium',
+  semibold: 'Poppins_600SemiBold',
+  bold: 'Poppins_700Bold',
 } as const;
 
 export const elevation = {
@@ -139,5 +139,5 @@ const arabicFamily = {
   bold: 'NotoSansArabic_700Bold',
 } as const;
 
-/** Inter has no Arabic glyphs, so Arabic uses Noto Sans Arabic. Read at render time. */
+/** Poppins has no Arabic glyphs, so Arabic uses Noto Sans Arabic. Read at render time. */
 export const fontFor = (weight: keyof typeof fontFamily) => (getLocale() === 'ar' ? arabicFamily : fontFamily)[weight];
