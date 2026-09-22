@@ -3,7 +3,7 @@ import { StatusBar } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NotoSansArabic_400Regular, NotoSansArabic_500Medium, NotoSansArabic_600SemiBold, NotoSansArabic_700Bold } from '@expo-google-fonts/noto-sans-arabic';
 import { I18nProvider, LocaleView } from './src/i18n/I18nProvider';
-import { Inter_400Regular, Inter_500Medium, Inter_600SemiBold, Inter_700Bold, useFonts } from '@expo-google-fonts/inter';
+import { Poppins_400Regular, Poppins_500Medium, Poppins_600SemiBold, Poppins_700Bold, useFonts } from '@expo-google-fonts/poppins';
 import { ThemeProvider, useTheme } from './src/theme/ThemeProvider';
 import { AdaptiveLayoutProvider } from './src/layout/AdaptiveLayout';
 import { AppNavigator } from './src/navigation/AppNavigator';
@@ -28,7 +28,7 @@ function Root() {
 
 export default function App() {
   const [loaded] = useFonts({
-    Inter_400Regular, Inter_500Medium, Inter_600SemiBold, Inter_700Bold,
+    Poppins_400Regular, Poppins_500Medium, Poppins_600SemiBold, Poppins_700Bold,
     NotoSansArabic_400Regular, NotoSansArabic_500Medium, NotoSansArabic_600SemiBold, NotoSansArabic_700Bold,
   });
   if (!loaded) return null;
